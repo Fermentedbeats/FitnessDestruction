@@ -38,3 +38,21 @@ function Workout(list, quantity){
     this.select(this.quantity);
 }
 
+
+// TIME SHIT
+// random duration per exercise
+// countdown clock + breaks + cycle breaks
+
+
+
+
+
+
+
+
+
+
+
+
+
+
