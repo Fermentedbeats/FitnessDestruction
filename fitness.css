@@ -1,0 +1,16 @@
+#container {
+	width: 100%
+}
+
+#getInfo, #instructions {
+	display: block;
+	/*border: 1px solid black;*/
+	width: 80%;
+	margin-left: 10%;
+	margin-top: 10px;
+}
+
+#numExercises, #numCycles, #exerciseName, #countdown{
+	display: inline-block;
+	margin-left: 10%;
+}
