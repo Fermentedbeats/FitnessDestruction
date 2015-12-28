@@ -38,6 +38,22 @@ function Workout(list, quantity){
     this.select(this.quantity);
 }
 
+// Hey Scott - here's what was in JSBin:
+
+var i = 10;
+
+for (i; i > 0; i--) {
+  var fuckOff = setTimeout(dick, 1000);
+   
+}
+
+
+
+function dick(){
+    console.log(i);
+      
+  }
+
 
 // TIME SHIT
 // random duration per exercise
