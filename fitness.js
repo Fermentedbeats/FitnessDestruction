@@ -52,6 +52,16 @@ function Workout(list, numExercises, numCycles){
     for (var j = 0; j < numCycles; j++){
     	this.select(numExercises);
     }
+
+    this.display = function(){
+    	var exDisplay = document.getElementById('exerciseName');
+    	var whut = this.workout[0][0].name;
+    	var text = document.createTextNode(whut);
+
+    	exDisplay.appendChild(text);
+    }
+    this.display();
+
 }
 
 
