@@ -10,7 +10,19 @@
 	margin-top: 10px;
 }
 
-#numExercises, #numCycles, #exerciseName, #countdown{
+#numEx, #numCy, #exerciseName, #countdown{
 	display: inline-block;
 	margin-left: 10%;
+}
+
+#exerciseName, #countdown{
+	margin-top: 40px;
+
+}
+#button {
+	display: block;
+	margin-left: 30%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	/*background-color: black;	*/
 }

@@ -9,9 +9,9 @@
 
 	<div id='container'>
 		<div id='getInfo' class='visible'>
-			<div id='numExercises'>
-				<p>How many exercises?</p>
-				<select>
+			<div id='numEx'>
+				<p>How many fucking exercises?</p>
+				<select id='numExercises'>
 					<option value="5">5</option>
 					<option value="6">6</option>
 					<option value="7">7</option>
@@ -23,9 +23,9 @@
 				</select><br>
 			</div><!-- numExercises -->
 
-			<div id='numCycles'>
-				<p>How many rounds?</p>
-				<select>
+			<div id='numCy'>
+				<p>How many stupid rounds?</p>
+				<select id='numCycles'>
 					<option value="1">1</option>
 					<option value="2">2</option>
 					<option value="3">3</option>
@@ -37,6 +37,9 @@
 
 
 		</div><!-- getInfo -->
+		<div id="button">
+			<input type='button' value='START' onclick='start()'>
+		</div>
 
 
 		<div id='instructions' class='invisible'>

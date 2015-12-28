@@ -1,10 +1,23 @@
+
+
+function start() {
+	var numExercises = document.getElementById('numExercises').value;
+	// console.log(numExercises);
+	var numCycles = document.getElementById('numCycles').value;
+	// console.log(numCycles);
+	var myList = new ExerciseList();
+	myList.populateList();
+	var myWorkout = new Workout(myList.exerciseList, numExercises, numCycles);
+	console.log(myWorkout.workout);
+
+}
 function Exercise(name){
 	this.name  = name;
 }
 
 
 function ExerciseList(){
-	this.exerciseNames = ["jump rope", "jumping jacks", "push ups", "push up death spinner", "mountain climbers", "bicycles", "crunches", "leg raises", "bird dog", "squats", "toe touch", "bicep curls", "skull crushers", "dumbell butterflys", "dumbell overhead lift", "dual leg raises", "shoulder shredder", "thrusters", "weighted sit ups", "planks", "side planks", "shadow boxing", "ski jumps", "foot fire", "burpees", "jump squats", "lunges", "hydrants", "yoga trees", "down dog"];
+	this.exerciseNames = ["jump rope", "jumping jacks", "push ups", "push up death spinner", "mountain climbers", "bicycles", "crunches", "leg raises", "bird dog", "squats", "toe touch", "bicep curls", "skull crushers", "dumbell butterflies", "dumbell overhead lift", "dual leg raises", "shoulder shredders", "thrusters", "weighted sit ups", "planks", "side planks", "shadow boxing", "ski jumps", "foot fire", "burpees", "jump squats", "lunges", "hydrants", "yoga trees", "down dog"];
 	
   this.exerciseList = [];
   this.populateList = function(){
@@ -17,47 +30,32 @@ function ExerciseList(){
 }
 
 
-function Workout(list, quantity){
-	this.exerciseList = list;
-	this.quantity = quantity;
-	
-// 	this.repeat = repeat;
+function Workout(list, numExercises, numCycles){
+	// this.list = list;
+	// this.numExercises = numExercises;
+	// this.numCycles = numCycles;
 	this.workout = [];
 
-	this.select = function(numberLoops){
 
-		for(var i = 0; i < numberLoops; i++){
-			randNum = Math.floor((Math.random() * this.exerciseList.length));
-			if(this.workout.indexOf(this.exerciseList[randNum]) === -1 ){
-				this.workout.push(this.exerciseList[randNum]);
+	this.select = function(numExercises){
+		var cycle = [];
+		for(var i = 0; i < numExercises; i++){
+			randNum = Math.floor((Math.random() * list.length));
+			if(cycle.indexOf(list[randNum]) === -1 ){
+				cycle.push(list[randNum]);
 			} else {
 				i--;
 			}
 		}
+		this.workout.push(cycle);
 	};
-    this.select(this.quantity);
-}
-
-// Hey Scott - here's what was in JSBin:
-
-var i = 10;
-
-for (i; i > 0; i--) {
-  var fuckOff = setTimeout(dick, 1000);
-   
+    for (var j = 0; j < numCycles; j++){
+    	this.select(numExercises);
+    }
 }
 
 
 
-function dick(){
-    console.log(i);
-      
-  }
-
-
-// TIME SHIT
-// random duration per exercise
-// countdown clock + breaks + cycle breaks
 
 
 
