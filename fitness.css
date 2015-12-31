@@ -1,6 +1,5 @@
 #container {
 	width: 100%;
-	margin-top: 5em;
 }
 
 td  {
@@ -8,5 +7,8 @@ td  {
     height: 3em;
 }
 
-th {
+table {
+    border-spacing: 2em;
+    border-collapse: separate;
+
 }
