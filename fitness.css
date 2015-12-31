@@ -12,3 +12,6 @@ table {
     border-collapse: separate;
 
 }
+td, p {
+	/*font-size: 9em;*/
+}

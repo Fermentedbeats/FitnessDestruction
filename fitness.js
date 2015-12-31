@@ -88,7 +88,7 @@ function Workout(list, numExercises, numCycles){
 
     this.timer = function() {
     	var self = this;
-    	var timer = Math.floor((Math.random() * 5) + 1);
+    	var timer = Math.floor((Math.random() * 25) + 20);
     	document.getElementById('whatamidoing').innerHTML = 'SUFFER';
 
     	console.log('Go!!!');
@@ -111,7 +111,7 @@ function Workout(list, numExercises, numCycles){
     	var self = this;
     	console.log('Short Rest');
     	document.getElementById('whatamidoing').innerHTML = 'REST';
-    	var timer = 5
+    	var timer = 15
 
     	var timeBit = setInterval(function () {
     		console.log(timer);
@@ -128,7 +128,7 @@ function Workout(list, numExercises, numCycles){
     this.timerBreak = function() {
     	var self = this;
     	console.log('Long Rest');
-    	var timer = 10
+    	var timer = 120
 
     	var timeBit = setInterval(function () {
     		console.log(timer);
@@ -144,9 +144,6 @@ function Workout(list, numExercises, numCycles){
 
 }
 
-function randNum() {
-	return Math.floor((Math.random() * 5) + 10);
-}
 
 
 
