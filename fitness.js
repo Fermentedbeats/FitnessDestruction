@@ -61,13 +61,8 @@ function Workout(list, numExercises, numCycles){
 
 }
 
-
-
-
-
-
-function Timer(duration) {
-    var time = duration;
+function timer(duration) {
+    var timer = duration;
     console.log('Go!!!');
     
     var timeInt = setInterval(function(){
@@ -79,6 +74,12 @@ function Timer(duration) {
         }
     }, 1000);
 }
+
+function randNum() {
+	return Math.floor((Math.random() * 40) + 20);
+}
+
+
 
 
 
