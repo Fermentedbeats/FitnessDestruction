@@ -2,15 +2,14 @@
 
 function start() {
 	var numExercises = document.getElementById('numExercises').value;
-	// console.log(numExercises);
 	var numCycles = document.getElementById('numCycles').value;
-	// console.log(numCycles);
 	var myList = new ExerciseList();
 	myList.populateList();
 	var myWorkout = new Workout(myList.exerciseList, numExercises, numCycles);
 	console.log(myWorkout.workout);
 
 }
+
 function Exercise(name){
 	this.name  = name;
 }
@@ -19,11 +18,11 @@ function Exercise(name){
 function ExerciseList(){
 	this.exerciseNames = ["jump rope", "jumping jacks", "push ups", "push up death spinner", "mountain climbers", "bicycles", "crunches", "leg raises", "bird dog", "squats", "toe touch", "bicep curls", "skull crushers", "dumbell butterflies", "dumbell overhead lift", "dual leg raises", "shoulder shredders", "thrusters", "weighted sit ups", "planks", "side planks", "shadow boxing", "ski jumps", "foot fire", "burpees", "jump squats", "lunges", "hydrants", "yoga trees", "down dog"];
 	
-  this.exerciseList = [];
-  this.populateList = function(){
-	  for(var i = 0; i < this.exerciseNames.length; i++){
-		  var a = new Exercise(this.exerciseNames[i]);
-		  this.exerciseList.push(a);
+  	this.exerciseList = [];
+  	this.populateList = function(){
+	  	for(var i = 0; i < this.exerciseNames.length; i++){
+		  	var a = new Exercise(this.exerciseNames[i]);
+		  	this.exerciseList.push(a);
 		}
 
 	};
@@ -31,11 +30,8 @@ function ExerciseList(){
 
 
 function Workout(list, numExercises, numCycles){
-	// this.list = list;
-	// this.numExercises = numExercises;
-	// this.numCycles = numCycles;
-	this.workout = [];
 
+	this.workout = [];
 
 	this.select = function(numExercises){
 		var cycle = [];
@@ -49,6 +45,7 @@ function Workout(list, numExercises, numCycles){
 		}
 		this.workout.push(cycle);
 	};
+
     for (var j = 0; j < numCycles; j++){
     	this.select(numExercises);
     }
@@ -63,6 +60,27 @@ function Workout(list, numExercises, numCycles){
     this.display();
 
 }
+
+
+
+
+
+
+function Timer(duration) {
+    var time = duration;
+    console.log('Go!!!');
+    
+    var timeInt = setInterval(function(){
+        console.log(timer);
+        timer--;
+        if (timer < 0) {
+            console.log('wee');
+            clearInterval(timeBit);
+        }
+    }, 1000);
+}
+
+
 
 
 
