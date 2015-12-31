@@ -7,6 +7,7 @@ function start() {
 	myList.populateList();
 	var myWorkout = new Workout(myList.exerciseList, numExercises, numCycles);
 	console.log(myWorkout.workout);
+	myWorkout.nextExercise();
 
 }
 
@@ -27,6 +28,7 @@ function ExerciseList(){
 
 	};
 }
+
 
 
 function Workout(list, numExercises, numCycles){
@@ -50,33 +52,96 @@ function Workout(list, numExercises, numCycles){
     	this.select(numExercises);
     }
 
-    this.display = function(){
+    this.display = function(exercise){
     	var exDisplay = document.getElementById('exerciseName');
-    	var whut = this.workout[0][0].name;
-    	var text = document.createTextNode(whut);
+    	var old = exDisplay.firstChild;
+    	var name = exercise.name;
+    	var text = document.createTextNode(name);
 
-    	exDisplay.appendChild(text);
+    	exDisplay.replaceChild(text, old);
     }
-    this.display();
 
-}
+    this.displayClock = function(time){
+    	var exDisplay = document.getElementById('countdown');
+    	exDisplay.innerHtml = time;
+    	// var old = exDisplay.firstChild;
+    	// var name = exercise.name;
+    	// var text = document.createTextNode(name);
 
-function timer(duration) {
-    var timer = duration;
-    console.log('Go!!!');
+    	// exDisplay.replaceChild(text, old);
+    }
     
-    var timeInt = setInterval(function(){
-        console.log(timer);
-        timer--;
-        if (timer < 0) {
-            console.log('wee');
-            clearInterval(timeBit);
-        }
-    }, 1000);
+    this.nextExercise = function (){
+  		if (this.workout[0].length === 0){
+  			this.workout.shift();
+    		if (this.workout.length === 0){
+    			console.log("You're done")
+    		} else {
+    			this.timerBreak();
+    		}
+    		
+  		} else {
+    		this.display(this.workout[0][0]);  
+    		this.timerShort();
+  		}
+	}
+
+	this.timer = function() {
+		var self = this;
+    	var timer = Math.floor((Math.random() * 5) + 1);
+    	console.log('Go!!!');
+    
+    	var timeBit = setInterval(function () {
+        	console.log(timer);
+        	self.displayClock(timer);
+        	timer--;
+        	if (timer < 0) {
+            	
+            	clearInterval(timeBit);
+            	self.workout[0].shift()
+            	self.nextExercise();
+            	
+        	}
+    	}, 1000);
+	}
+
+	this.timerShort = function() {
+		var self = this;
+		console.log('Short Rest');
+    	var timer = 5
+    
+    	var timeBit = setInterval(function () {
+        	console.log(timer);
+        	timer--;
+        	if (timer < 0) {
+            	clearInterval(timeBit);
+            	self.timer();
+            	
+        	}
+    	}, 1000);
+	}
+
+	this.timerBreak = function() {
+		var self = this;
+		console.log('Long Rest');
+    	var timer = 10
+    
+    	var timeBit = setInterval(function () {
+        	console.log(timer);
+        	timer--;
+        	if (timer < 0) {
+            	clearInterval(timeBit);
+            	self.nextExercise();
+            			
+        	}
+    	}, 1000);
+	}
+
+
 }
 
 function randNum() {
-	return Math.floor((Math.random() * 40) + 20);
+	return Math.floor((Math.random() * 5) + 10);
 }
 
 
