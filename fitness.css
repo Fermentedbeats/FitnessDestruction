@@ -1,28 +1,12 @@
 #container {
-	width: 100%
+	width: 100%;
+	margin-top: 5em;
 }
 
-#getInfo, #instructions {
-	display: block;
-	/*border: 1px solid black;*/
-	width: 80%;
-	margin-left: 10%;
-	margin-top: 10px;
+td  {
+	text-align: center;
+    height: 3em;
 }
 
-#numEx, #numCy, #exerciseName, #countdown{
-	display: inline-block;
-	margin-left: 10%;
-}
-
-#exerciseName, #countdown{
-	margin-top: 40px;
-
-}
-#button {
-	display: block;
-	margin-left: 30%;
-	margin-top: 20px;
-	margin-bottom: 20px;
-	/*background-color: black;	*/
+th {
 }

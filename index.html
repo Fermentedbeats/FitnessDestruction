@@ -8,59 +8,73 @@
 
 
 	<div id='container'>
-		<div id='getInfo' class='visible'>
-			<div id='numEx'>
-				<p>How many fucking exercises?</p>
-				<select id='numExercises'>
-					<option value="5">5</option>
-					<option value="6">6</option>
-					<option value="7">7</option>
-					<option value="8">8</option>
-					<option value="9">9</option>
-					<option value="10">10</option>
-					<option value="11">11</option>
-					<option value="12">12</option>
-				</select><br>
-			</div><!-- numExercises -->
+		<table>
+			<tr id='getInfo' class='visible'>
+				<td><p>How many fucking exercises?</p></td>
+				<td><p>How many stupid rounds?</p></td>
+			</tr>
+			<tr>
+				<td class='dropdowns'>
+					<select id='numExercises'>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+					</select>
+				</td>
+				<td class='dropdowns'>
+					<select id='numCycles'>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+					</select><br>
+				</td>
+			</tr>
+			<tr>
+				<td id='button' colspan='2'>
+					<input type='button' value='START' onclick='start()'>
+				</td>
+			</tr>
 
-			<div id='numCy'>
-				<p>How many stupid rounds?</p>
-				<select id='numCycles'>
-					<option value="1">1</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-					<option value="5">5</option>
-					<option value="6">6</option>
-				</select><br>
-			</div><!-- numCycles -->
+			<tr id='instructions' class='invisible'>
+				<!-- <div > -->
+				<td>
+					<!-- <div id='exerciseName'> -->
 
+					<p>EXERCISE</p>
+					<!-- </div>exerciseName -->
+					<!-- display exercise name -->
+				</td>
+				<td>
 
-		</div><!-- getInfo -->
-		<div id="button">
-			<input type='button' value='START' onclick='start()'>
-		</div>
+					<!-- <div id='countdown'> -->
+					<p>COUNTDOWN:</p>
+					<!-- </div>countdown -->
+					<!-- Aaaaaand..display the time somehow here -->
+				</td>
+			</tr>
+			<tr>
+				<td id='exerciseName'>
+					
+				</td>
+				<td id='countdown'>
+					
+				</td>
+			</tr>
+		</table>
 
+		<!-- </div>instructions -->
 
-		<div id='instructions' class='invisible'>
-			<div id='exerciseName'>
-				
-				<p>EXERCISE</p>
-			</div><!-- exerciseName -->
-			<!-- display exercise name -->
+	</tr>
 
-
-			<div id='countdown'>
-				<p>COUNTDOWN:</p>
-			</div><!-- countdown -->
-			<!-- Aaaaaand..display the time somehow here -->
-			
-
-		</div><!-- instructions -->
-
-
-
-	</div><!-- container -->
+</div><!-- container -->
 
 </body>
 </html>
