@@ -7,6 +7,7 @@ function start() {
 	myList.populateList();
 	var myWorkout = new Workout(myList.exerciseList, numExercises, numCycles);
 	console.log(myWorkout.workout);
+	buttonBits()
 	myWorkout.nextExercise();
 
 }
@@ -147,7 +148,13 @@ function Workout(list, numExercises, numCycles){
 
 
 
+// Front-End Goodies
 
+function buttonBits(){
+	 var first = document.getElementById('first');
+	 var second = document.getElementById('second');
+	 first.style.zIndex = -1;
+}
 
 
 

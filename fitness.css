@@ -1,17 +1,19 @@
-#container {
+#first {
+    z-index: 1;
+}
+
+#first, #second {
+	background-color: white;
 	width: 100%;
+	position: absolute;
+    left: 0px;
+    top: 0px;
 }
-
-td  {
-	text-align: center;
-    height: 3em;
+html *
+{
+   font-size: 1.3em;
 }
-
-table {
-    border-spacing: 2em;
-    border-collapse: separate;
-
-}
-td, p {
-	/*font-size: 9em;*/
+#button, select {
+	-webkit-appearance: menulist-button; 
+	font-size: 1.2em;
 }
