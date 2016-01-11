@@ -6,7 +6,8 @@ function start() {
 	var myList = new ExerciseList();
 	myList.populateList();
 	var myWorkout = new Workout(myList.exerciseList, numExercises, numCycles);
-	console.log(myWorkout.workout);
+	// console.log(myWorkout.workout);
+	buttonBits()
 	myWorkout.nextExercise();
 
 }
@@ -88,7 +89,7 @@ function Workout(list, numExercises, numCycles){
 
     this.timer = function() {
     	var self = this;
-    	var timer = Math.floor((Math.random() * 25) + 20);
+    	var timer = Math.floor((Math.random() * 30) + 30);
     	document.getElementById('whatamidoing').innerHTML = 'SUFFER';
 
     	console.log('Go!!!');
@@ -128,7 +129,7 @@ function Workout(list, numExercises, numCycles){
     this.timerBreak = function() {
     	var self = this;
     	console.log('Long Rest');
-    	var timer = 120
+    	var timer = 60
 
     	var timeBit = setInterval(function () {
     		console.log(timer);
@@ -147,7 +148,13 @@ function Workout(list, numExercises, numCycles){
 
 
 
+// Front-End Goodies
 
+function buttonBits(){
+	 var first = document.getElementById('first');
+	 var second = document.getElementById('second');
+	 first.style.zIndex = -1;
+}
 
 
 

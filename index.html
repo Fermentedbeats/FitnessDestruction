@@ -2,84 +2,70 @@
 <head>
 	<script src='fitness.js'></script>
 	<link rel="stylesheet" type="text/css" href="fitness.css"> 
+	<!-- Latest compiled and minified CSS -->
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
+
+	<!-- Optional theme -->
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous"> -->
+
+	<!-- Latest compiled and minified JavaScript 
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script> -->
 </head>
 <body>
 
 
 
-	<div id='container'>
-		<table>
-			<tr id='getInfo' class='visible'>
-				<td><p>How many fucking exercises?</p></td>
-				<td><p>How many stupid rounds?</p></td>
-			</tr>
-			<tr>
-				<td class='dropdowns'>
-					<select id='numExercises'>
-						<option value="5">5</option>
-						<option value="6">6</option>
-						<option value="7">7</option>
-						<option value="8">8</option>
-						<option value="9">9</option>
-						<option value="10">10</option>
-						<option value="11">11</option>
-						<option value="12">12</option>
-					</select>
-				</td>
-				<td class='dropdowns'>
-					<select id='numCycles'>
-						<option value="1">1</option>
-						<option value="2">2</option>
-						<option value="3">3</option>
-						<option value="4">4</option>
-						<option value="5">5</option>
-						<option value="6">6</option>
-					</select><br>
-				</td>
-			</tr>
-			<tr>
-				<td id='button' colspan='2'>
-					<input type='button' value='START' onclick='start()'>
-				</td>
-			</tr>
+	<div id='first' class="container-fluid">
+		
+	
+		<div class='col-md-12'>
+			<h1>How many fucking exercises?</h1>
+			<select id='numExercises'>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
+			</select>
+			
 
-			<tr id='instructions' class='invisible'>
-				<!-- <div > -->
-				<td>
-					<!-- <div id='exerciseName'> -->
+		</div>
+		
+		<div class='col-md-12'>
+			<h1>How many stupid rounds?</h1>
+			<select id='numCycles'>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+			</select><br>
 
-					<p>EXERCISE</p>
-					<!-- </div>exerciseName -->
-					<!-- display exercise name -->
-				</td>
-				<td>
-					<div id='whatamidoing'>
-						
-					<p>COUNTDOWN:</p>
-					</div>
-					<!-- <div id='countdown'> -->
-					<!-- </div>countdown -->
-					<!-- Aaaaaand..display the time somehow here -->
-				</td>
-			</tr>
-			<tr>
-				<td id='exerciseName'>
-					
-				</td>
-				<td>
-				<div id='countdown'>
-					
-				</div> 
-					
-				</td>
-			</tr>
-		</table>
+		</div >
 
-		<!-- </div>instructions -->
+			
+		<input id='button' type='submit' value='START' onclick='start()'>
+	</div><!-- first -->
 
-	</tr>
 
-</div><!-- container -->
+	<div id='second' class="container-fluid">
+		<div class='col-md-12'>
+			<h1>EXERCISE</h1>
+			<div id='exerciseName'>
+			</div>
+		</div>
+		<div class='col-md-12'>
+				<h1 id='whatamidoing'>COUNTDOWN:</h1>
+				<div id='countdown'></div>
+		</div>
 
+
+
+
+</div><!--second-->
 </body>
 </html>
