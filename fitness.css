@@ -13,7 +13,26 @@ html *
 {
    font-size: 1.3em;
 }
-#button, select {
+#button {
+	margin-top: 1em;
+	-webkit-appearance: menulist-button; 
+	font-size: 2em;
+	margin-left: 45%;
+	padding-bottom: 100px 100px;
+}
+
+.dropdown-menu:before, 
+.dropdown-menu:after {
+    border: none !important; 
+    content: none !important;
+}
+
+select {
 	-webkit-appearance: menulist-button; 
 	font-size: 1.2em;
+	margin-left: 45%
+}
+
+h1 {
+	text-align: center;
 }
